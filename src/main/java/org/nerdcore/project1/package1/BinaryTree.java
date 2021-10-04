@@ -1,7 +1,6 @@
 package org.nerdcore.project1.package1;
 
 import java.io.Serializable;
-import java.sql.SQLOutput;
 import java.util.LinkedList;
 import java.util.Queue;
 
