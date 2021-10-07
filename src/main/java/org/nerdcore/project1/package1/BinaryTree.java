@@ -6,7 +6,7 @@ import java.util.Queue;
 
 /*
  * Project: Project 1
- * Completion Time: XX Hours
+ * Completion Time: 2 Hours
  *
  * Honor Code: "I pledge that I have neither given nor received help from anyone
  * other than the instructor or the TAs for all program components here."
@@ -40,7 +40,7 @@ public class BinaryTree<T> implements Serializable {
     }
 
     private BinaryTree<T> build(T[] data, int i) {
-        if (i >= data.length) return null;
+        if (i >= data.length || data[i] == null) return null;
         BinaryTree<T> root = new BinaryTree<>(data[i]);
         root.attachLeft(build(data, 2 * i + 1));
         root.attachRight(build(data, 2 * i + 2));
@@ -95,14 +95,6 @@ public class BinaryTree<T> implements Serializable {
                 }
             }
             System.out.println();
-//            BinaryTree<T> BT = Q.poll();
-//            System.out.println(BT);
-//            if(BT.left != null){
-//                Q.add(BT.left);
-//            }
-//            if(BT.right != null){
-//                Q.add(BT.right);
-//            }
         }
     }
 
@@ -126,6 +118,7 @@ public class BinaryTree<T> implements Serializable {
     private void preOrder(BinaryTree<T> tree) {
 
         if (tree != null) {
+
             System.out.print(tree.getData());
             System.out.print(", ");
             preOrder(tree.left);
