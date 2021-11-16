@@ -11,6 +11,6 @@ public class Student {
 
     @Override
     public String toString() {
-        return "name:"+name+", gpa:"+gpa;
+        return "(name:"+name+", gpa:"+gpa+")";
     }
 }
